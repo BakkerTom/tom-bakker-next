@@ -1,12 +1,6 @@
-import Head from 'next/head'
-
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Tom Bakker</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <div className='pt-32 pb-16'>
         <h1 className='text-7xl font-black tracking-wide text-gray-800 mb-2'>Tom Bakker</h1>
         <h2 className='text-3xl font-semibold tracking-wide text-gray-400 ml-2'>App Developer at Efteling</h2>
