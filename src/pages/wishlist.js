@@ -4,12 +4,10 @@ import Link from 'next/link'
 import Grid from '~/components/wishlist/grid'
 import Item from '~/components/wishlist/item'
 
-import data from '~/data/wishlist'
-
-export default function Wishlist () {
-  const items = data.map(item => (
+export default function Wishlist ({ products }) {
+  const items = products.map(item => (
     <Item
-      key={item.url}
+      key={item.slug}
       name={item.name}
       url={item.url}
       imageUrl={item.imageUrl}
@@ -38,4 +36,14 @@ export default function Wishlist () {
       </Grid>
     </>
   )
+}
+
+export async function getStaticProps(context) {
+  let url = 'https://api.sheety.co/2743bb35d14dc7bca4c373890c7a270e/wishlist/products';
+  let response = await fetch(url)
+  let data = await response.json()
+
+  return {
+    props: { products: data.products }
+  }
 }

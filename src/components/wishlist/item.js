@@ -4,7 +4,7 @@ export default function Item ({ name, url, imageUrl, price }) {
   return (
     <a href={url} className='block bg-white rounded-xl overflow-hidden relative'>
       <div className='absolute top-0 right-0 m-2 sm:m-4 bg-black text-white font-mono rounded p-2 text-sm'>
-       {price}
+       €{price}
       </div>
       <img src={imageUrl} />
       <div className='p-4'>
