@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 import Grid from '~/components/wishlist/grid'
 import Item from '~/components/wishlist/item'
+
 
 export default function Wishlist ({ products }) {
   const items = products.map(item => (
@@ -31,9 +33,11 @@ export default function Wishlist ({ products }) {
         <h1 className='text-4xl font-semibold mt-2 mb-1'>Wishlist</h1>
         <p className='text-gray-600'>Products I'm interested in</p>
       </div>
-      <Grid columns={2} gap={16}>
-        {items}
-      </Grid>
+      <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+        <Grid columns={2} gap={16}>
+          {items}
+        </Grid>
+      </motion.div>
     </>
   )
 }
