@@ -23,7 +23,7 @@ export default function Wishlist ({ products }) {
       </Head>
       <div className='my-6'>
         <Link href='/'>
-          <div class='flex items-center text-gray-500 cursor-pointer hover:text-indigo-400'>
+          <div class='flex items-center text-gray-500 cursor-pointer hover:text-green-600'>
             <svg className='w-4 h-4 mr-2' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
